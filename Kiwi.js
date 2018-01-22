@@ -15,7 +15,6 @@ class Kiwi{
     }
 
     update(){
-        console.log(this.v); 
         if(clicked){
             clicked = false; //clicked is put on false after being clicked; 
             this.increaseVelocity(-this.upForce); 
