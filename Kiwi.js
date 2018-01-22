@@ -7,10 +7,11 @@ class Kiwi{
         this.v = 0; //velocity 
         this.maxV = 25; 
         this.upForce = 10;  
+        this.kiwiImg = loadImage('https://images.vexels.com/media/users/3/144016/isolated/lists/c6a35c06ad1ba1bcd53629ff5d299ae0-kiwi-bird-apteryx.png'); 
     }
 
     show(){
-        fill(153, 102, 51); 
+        fill(153,102,51); 
         ellipse(this.x, this.y, 20, 20); 
     }
 

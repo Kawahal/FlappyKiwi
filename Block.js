@@ -9,7 +9,7 @@ class Block{
     }
 
     show(){
-        fill(102, 51, 0); 
+        fill(220,20,60); 
         rect(this.x, 0, this.w, this.y-(this.h/2)); //top rectangle 
         rect(this.x, this.y+(this.h/2), this.w, height-(this.h/2)-this.y); //top rectangle 
     }

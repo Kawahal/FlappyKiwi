@@ -3,6 +3,7 @@ let kiwi;
 let blocks = []; 
 let textInfo; 
 let sc = 0; 
+let bg; 
 
 function setup(){
     createCanvas(720, 600); 
@@ -10,10 +11,12 @@ function setup(){
     kiwi = new Kiwi(); 
     blocks.push(new Block()); 
     textInfo = new InfoText(); 
+    bg = loadImage('https://lh6.ggpht.com/lLT9rLhXkCJlKiq9dE1crU_GpueAuAi3ZaLaAcXFSOkAA7l__kulBBTV1rCMzBMEo99u=h900'); 
 }
 
+
 function draw(){
-    background(0); 
+    background(bg); 
     textInfo.show();  
     kiwi.show(); 
     kiwi.update(); 
@@ -34,7 +37,7 @@ function draw(){
             }
         }else{
             sc++; 
-           textInfo.info = "Score: " + sc; 
+            textInfo.info = "Score: " + sc; 
         }
     }
 
