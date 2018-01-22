@@ -2,14 +2,14 @@
 let kiwi;
 let blocks = []; 
 let textInfo; 
-let score = 0; 
+let sc = 0; 
 
 function setup(){
     createCanvas(720, 600); 
-    frameRate(30); 
+    frameRate(40); 
     kiwi = new Kiwi(); 
     blocks.push(new Block()); 
-    textInfo = new Text(); 
+    textInfo = new InfoText(); 
 }
 
 function draw(){
@@ -30,20 +30,21 @@ function draw(){
     for(let elem of blocks){
         if(kiwi.x >= elem.x-elem.w/2 && kiwi.x<=elem.x-elem.w/2){
             if(kiwi.y < elem.y-(elem.h/2) || kiwi.y > elem.y+(elem.h/2)){
-                console.log("HIT"); 
                 endGame(); 
             }
         }else{
-            score++; 
-            textInfo.info = "Score: " + score; 
+            sc++; 
+           textInfo.info = "Score: " + sc; 
         }
     }
 
 }
 
+
 function endGame(){
-    textInfo.info = "FINAL SCORE: " + score; 
-    background(0); 
-    textInfo.show();  
+    background(255); 
+    textInfo.info = "GAME OVER\nSCORE: " + sc;  
+    textInfo.show(); 
     noLoop(); 
 }
+
