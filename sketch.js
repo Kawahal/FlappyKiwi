@@ -6,7 +6,7 @@ let sc = 0;
 let bg; 
 
 function setup(){
-    createCanvas(windowWidth, windowHeight); 
+    createCanvas(windowWidth-100, windowHeight-100); 
     frameRate(40); 
     kiwi = new Kiwi(); 
     blocks.push(new Block()); 
